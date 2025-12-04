@@ -279,6 +279,12 @@ class ViewController: UIViewController, ElectraUI {
                         any_proc = our_proc_kAddr
                         hasKernelRw = true
                     }
+                case .cve_2021_30883:
+                    print("Selecting CVE-2021-30883 exploit for iOS 14.0 - 14.8")
+                    if cve_2021_30883_exploit() == 0 {
+                        any_proc = our_proc_kAddr
+                        hasKernelRw = true
+                    }
                 default:
                     fatalError("Unable to get kernel r/w")
                 }

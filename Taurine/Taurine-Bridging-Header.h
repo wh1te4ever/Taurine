@@ -13,6 +13,8 @@
 #import "cicuta_virosa.h"
 #import <xpc/xpc.h>
 #include "jailbreak_daemonUser.h"
+#import "exploit/CVE-2021-30883/exploit.h"
+
 
 uint64_t do_kopen(uint64_t puaf_pages, uint64_t puaf_method, uint64_t kread_method, uint64_t kwrite_method);
 
