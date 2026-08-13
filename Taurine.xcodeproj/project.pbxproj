@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		8722909125D5BC41008E11FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8722909025D5BC41008E11FA /* Assets.xcassets */; };
 		8773B95D25EA2F640025E520 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8773B95C25EA2F640025E520 /* IOKit.framework */; };
+		AA9DFBFC302DA59B00BFDA86 /* socket.c in Sources */ = {isa = PBXBuildFile; fileRef = AA9DFBF9302DA59B00BFDA86 /* socket.c */; };
+		AA9DFBFD302DA59B00BFDA86 /* offsets.c in Sources */ = {isa = PBXBuildFile; fileRef = AA9DFBF3302DA59B00BFDA86 /* offsets.c */; };
+		AA9DFBFE302DA59B00BFDA86 /* kernel_rw.c in Sources */ = {isa = PBXBuildFile; fileRef = AA9DFBEE302DA59B00BFDA86 /* kernel_rw.c */; };
+		AA9DFBFF302DA59B00BFDA86 /* pipe.c in Sources */ = {isa = PBXBuildFile; fileRef = AA9DFBF7302DA59B00BFDA86 /* pipe.c */; };
+		AA9DFC00302DA59B00BFDA86 /* ool_port.c in Sources */ = {isa = PBXBuildFile; fileRef = AA9DFBF5302DA59B00BFDA86 /* ool_port.c */; };
+		AA9DFC01302DA59B00BFDA86 /* lockf.c in Sources */ = {isa = PBXBuildFile; fileRef = AA9DFBF0302DA59B00BFDA86 /* lockf.c */; };
+		AA9DFC02302DA59B00BFDA86 /* humptylock.c in Sources */ = {isa = PBXBuildFile; fileRef = AA9DFBEC302DA59B00BFDA86 /* humptylock.c */; };
 		AACA133F2EE132AC003B95A0 /* offsets.m in Sources */ = {isa = PBXBuildFile; fileRef = AACA133D2EE132AC003B95A0 /* offsets.m */; };
 		AACA13402EE132AC003B95A0 /* krw.c in Sources */ = {isa = PBXBuildFile; fileRef = AACA133B2EE132AC003B95A0 /* krw.c */; };
 		AACA13412EE132AC003B95A0 /* find_port.c in Sources */ = {isa = PBXBuildFile; fileRef = AACA13362EE132AC003B95A0 /* find_port.c */; };
@@ -166,6 +173,23 @@
 		8773B95425EA2B1B0025E520 /* KernelRW.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = KernelRW.hpp; sourceTree = "<group>"; };
 		8773B95C25EA2F640025E520 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		8773B96025EA30020025E520 /* libgeneral_exception.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = libgeneral_exception.cpp; sourceTree = "<group>"; };
+		AA9DFBEA302DA59B00BFDA86 /* file_internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = file_internal.h; sourceTree = "<group>"; };
+		AA9DFBEB302DA59B00BFDA86 /* humptylock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = humptylock.h; sourceTree = "<group>"; };
+		AA9DFBEC302DA59B00BFDA86 /* humptylock.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = humptylock.c; sourceTree = "<group>"; };
+		AA9DFBED302DA59B00BFDA86 /* kernel_rw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kernel_rw.h; sourceTree = "<group>"; };
+		AA9DFBEE302DA59B00BFDA86 /* kernel_rw.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kernel_rw.c; sourceTree = "<group>"; };
+		AA9DFBEF302DA59B00BFDA86 /* lockf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lockf.h; sourceTree = "<group>"; };
+		AA9DFBF0302DA59B00BFDA86 /* lockf.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lockf.c; sourceTree = "<group>"; };
+		AA9DFBF1302DA59B00BFDA86 /* locks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = locks.h; sourceTree = "<group>"; };
+		AA9DFBF2302DA59B00BFDA86 /* offsets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = offsets.h; sourceTree = "<group>"; };
+		AA9DFBF3302DA59B00BFDA86 /* offsets.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = offsets.c; sourceTree = "<group>"; };
+		AA9DFBF4302DA59B00BFDA86 /* ool_port.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ool_port.h; sourceTree = "<group>"; };
+		AA9DFBF5302DA59B00BFDA86 /* ool_port.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ool_port.c; sourceTree = "<group>"; };
+		AA9DFBF6302DA59B00BFDA86 /* pipe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pipe.h; sourceTree = "<group>"; };
+		AA9DFBF7302DA59B00BFDA86 /* pipe.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pipe.c; sourceTree = "<group>"; };
+		AA9DFBF8302DA59B00BFDA86 /* socket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = socket.h; sourceTree = "<group>"; };
+		AA9DFBF9302DA59B00BFDA86 /* socket.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = socket.c; sourceTree = "<group>"; };
+		AA9DFBFA302DA59B00BFDA86 /* uio_internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = uio_internal.h; sourceTree = "<group>"; };
 		AACA13302EE132AC003B95A0 /* ENABLE_HELPER.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ENABLE_HELPER.h; sourceTree = "<group>"; };
 		AACA13312EE132AC003B95A0 /* exploit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = exploit.h; sourceTree = "<group>"; };
 		AACA13322EE132AC003B95A0 /* exploit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = exploit.c; sourceTree = "<group>"; };
@@ -367,6 +391,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AA9DFBFB302DA59B00BFDA86 /* humptylock */ = {
+			isa = PBXGroup;
+			children = (
+				AA9DFBEA302DA59B00BFDA86 /* file_internal.h */,
+				AA9DFBEB302DA59B00BFDA86 /* humptylock.h */,
+				AA9DFBEC302DA59B00BFDA86 /* humptylock.c */,
+				AA9DFBED302DA59B00BFDA86 /* kernel_rw.h */,
+				AA9DFBEE302DA59B00BFDA86 /* kernel_rw.c */,
+				AA9DFBEF302DA59B00BFDA86 /* lockf.h */,
+				AA9DFBF0302DA59B00BFDA86 /* lockf.c */,
+				AA9DFBF1302DA59B00BFDA86 /* locks.h */,
+				AA9DFBF2302DA59B00BFDA86 /* offsets.h */,
+				AA9DFBF3302DA59B00BFDA86 /* offsets.c */,
+				AA9DFBF4302DA59B00BFDA86 /* ool_port.h */,
+				AA9DFBF5302DA59B00BFDA86 /* ool_port.c */,
+				AA9DFBF6302DA59B00BFDA86 /* pipe.h */,
+				AA9DFBF7302DA59B00BFDA86 /* pipe.c */,
+				AA9DFBF8302DA59B00BFDA86 /* socket.h */,
+				AA9DFBF9302DA59B00BFDA86 /* socket.c */,
+				AA9DFBFA302DA59B00BFDA86 /* uio_internal.h */,
+			);
+			path = humptylock;
+			sourceTree = "<group>";
+		};
 		AACA133E2EE132AC003B95A0 /* CVE-2021-30883 */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,6 +513,7 @@
 				8722909E25D5BC5A008E11FA /* cicuta_virosa */,
 				F18579B72A92D970004AD2CD /* kfd */,
 				AACA133E2EE132AC003B95A0 /* CVE-2021-30883 */,
+				AA9DFBFB302DA59B00BFDA86 /* humptylock */,
 			);
 			path = exploit;
 			sourceTree = "<group>";
@@ -827,6 +876,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F17E752325FF2E13008262A7 /* cicuta_log.c in Sources */,
+				AA9DFBFC302DA59B00BFDA86 /* socket.c in Sources */,
+				AA9DFBFD302DA59B00BFDA86 /* offsets.c in Sources */,
+				AA9DFBFE302DA59B00BFDA86 /* kernel_rw.c in Sources */,
+				AA9DFBFF302DA59B00BFDA86 /* pipe.c in Sources */,
+				AA9DFC00302DA59B00BFDA86 /* ool_port.c in Sources */,
+				AA9DFC01302DA59B00BFDA86 /* lockf.c in Sources */,
+				AA9DFC02302DA59B00BFDA86 /* humptylock.c in Sources */,
 				F17E752425FF2E13008262A7 /* cicuta_virosa.c in Sources */,
 				F17E752525FF2E13008262A7 /* descriptors_utils.c in Sources */,
 				F17E752625FF2E13008262A7 /* exploit_utilities.c in Sources */,
@@ -1047,7 +1103,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WF2CP4P53E;
+				DEVELOPMENT_TEAM = AR43PX4PV2;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Taurine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1058,7 +1114,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Taurine/resources",
 				);
-				MARKETING_VERSION = "1.1.7-5";
+				MARKETING_VERSION = "1.1.7-6";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.h4ck.taurine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1077,7 +1133,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WF2CP4P53E;
+				DEVELOPMENT_TEAM = AR43PX4PV2;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Taurine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1088,7 +1144,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Taurine/resources",
 				);
-				MARKETING_VERSION = "1.1.7-5";
+				MARKETING_VERSION = "1.1.7-6";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.h4ck.taurine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

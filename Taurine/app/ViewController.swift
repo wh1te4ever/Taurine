@@ -253,6 +253,15 @@ class ViewController: UIViewController, ElectraUI {
                 var any_proc = UInt64(0)
                 
                 switch ExploitManager.shared.chosenExploit {
+                case .humptyLock:
+                    print("Selecting HumptyLock for iOS 14.0 - 14.4.2")
+
+                    if humptylock_exploit() == 0,
+                       isKernRwReady(),
+                       our_proc_kAddr != 0 {
+                        any_proc = our_proc_kAddr
+                        hasKernelRw = true
+                    }
                 case .cicutaVirosa:
                     print("Selecting cicuta_virosa for iOS 14.0 - 14.3")
                     if cicuta_virosa() == 0 {

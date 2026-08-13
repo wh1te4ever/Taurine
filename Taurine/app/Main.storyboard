@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="veQ-yo-6fF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="veQ-yo-6fF">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -841,8 +841,48 @@
                                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4na-Gx-R4l" userLabel="Exploits View" customClass="PanelStackView" customModule="Taurine" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="217" height="224"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wio-0Y-LvS" customClass="ExploitSelectionButton" customModule="Taurine" customModuleProvider="target">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMV-Yw-RLV" customClass="ExploitSelectionButton" customModule="Taurine" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="217" height="44"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HumptyLock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4R-aa-jm6">
+                                                                                <rect key="frame" x="15" y="10" width="157.5" height="24"/>
+                                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" image="checkmark" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="68c-oV-ZvT">
+                                                                                <rect key="frame" x="187.5" y="15.5" width="14.5" height="13.5"/>
+                                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="regular"/>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="44" id="0W5-Pi-MfI"/>
+                                                                            <constraint firstItem="68c-oV-ZvT" firstAttribute="leading" secondItem="K4R-aa-jm6" secondAttribute="trailing" constant="15" id="1zn-v0-iE9"/>
+                                                                            <constraint firstItem="K4R-aa-jm6" firstAttribute="leading" secondItem="MMV-Yw-RLV" secondAttribute="leading" constant="15" id="7TX-IL-QWf"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="68c-oV-ZvT" secondAttribute="trailing" constant="15" id="HOe-y8-0IP"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="K4R-aa-jm6" secondAttribute="bottom" constant="10" id="Jya-kH-ZM4"/>
+                                                                            <constraint firstItem="68c-oV-ZvT" firstAttribute="centerY" secondItem="MMV-Yw-RLV" secondAttribute="centerY" id="ri9-O8-UkJ"/>
+                                                                            <constraint firstItem="K4R-aa-jm6" firstAttribute="top" secondItem="MMV-Yw-RLV" secondAttribute="top" constant="10" id="sfY-xv-RDN"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="defaultsKey" value="exploit"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="defaultsValue" value="humptyLock"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="notificationName" value="ExploitChangeNotification"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <outlet property="checkmarkImage" destination="68c-oV-ZvT" id="6Pd-qC-RxS"/>
+                                                                        </connections>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iyt-Mp-fjw" customClass="SeparatorView" customModule="Taurine" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="44" width="217" height="1"/>
+                                                                        <color key="backgroundColor" systemColor="separatorColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="1" id="Z7q-Mi-p4j"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wio-0Y-LvS" customClass="ExploitSelectionButton" customModule="Taurine" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="45" width="217" height="44"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CVE-2021-30883" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1n-5n-wH0" userLabel="CVE-2021-30883">
                                                                                 <rect key="frame" x="15" y="10" width="157.5" height="24"/>
@@ -875,14 +915,14 @@
                                                                         </connections>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="keK-sZ-4lS" customClass="SeparatorView" customModule="Taurine" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="44" width="217" height="1"/>
+                                                                        <rect key="frame" x="0.0" y="89" width="217" height="1"/>
                                                                         <color key="backgroundColor" systemColor="separatorColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="1" id="3Kw-7K-fRr"/>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTc-aN-t2P" customClass="ExploitSelectionButton" customModule="Taurine" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="45" width="217" height="44"/>
+                                                                        <rect key="frame" x="0.0" y="90" width="217" height="44"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cicuta_virosa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeV-1l-IUr">
                                                                                 <rect key="frame" x="15" y="10" width="157.5" height="24"/>
@@ -915,14 +955,14 @@
                                                                         </connections>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="saI-Hr-eX9" customClass="SeparatorView" customModule="Taurine" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="89" width="217" height="1"/>
+                                                                        <rect key="frame" x="0.0" y="134" width="217" height="1"/>
                                                                         <color key="backgroundColor" systemColor="separatorColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="1" id="2DY-We-aLx"/>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUx-SJ-SqT" customClass="ExploitSelectionButton" customModule="Taurine" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="90" width="217" height="44"/>
+                                                                        <rect key="frame" x="0.0" y="135" width="217" height="44"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kfd (physpuppet)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tT-YA-GJ3">
                                                                                 <rect key="frame" x="15" y="10" width="157.5" height="24"/>
@@ -955,14 +995,14 @@
                                                                         </connections>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ier-3M-TS4" customClass="SeparatorView" customModule="Taurine" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="134" width="217" height="1"/>
+                                                                        <rect key="frame" x="0.0" y="179" width="217" height="1"/>
                                                                         <color key="backgroundColor" systemColor="separatorColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="1" id="eqA-UW-WvL"/>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7S-VR-FO7" customClass="ExploitSelectionButton" customModule="Taurine" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="135" width="217" height="44"/>
+                                                                        <rect key="frame" x="0.0" y="180" width="217" height="44"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kfd (smith)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vvg-74-S5d">
                                                                                 <rect key="frame" x="15" y="10" width="157.5" height="24"/>
@@ -995,7 +1035,7 @@
                                                                         </connections>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJr-Ky-fFg" userLabel="Clear View">
-                                                                        <rect key="frame" x="0.0" y="179" width="217" height="45"/>
+                                                                        <rect key="frame" x="0.0" y="224" width="217" height="0.0"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </view>
                                                                 </subviews>
